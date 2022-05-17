@@ -1,0 +1,31 @@
+@import "/src/assets/sass/_variables.scss";
+
+.tasks-container {
+  overflow: auto;
+  white-space: nowrap;
+}
+.tasks-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.task-container {
+  padding: 1rem 2rem;
+}
+.tasks-container {
+  max-height: 50vh;
+}
+.task-container-title {
+  padding-bottom: 0.5rem;
+}
+.task-items {
+  overflow: auto;
+  white-space: nowrap;
+}
+.task-item {
+  background-color: $background-color-dark-primary;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  list-style: none;
+}

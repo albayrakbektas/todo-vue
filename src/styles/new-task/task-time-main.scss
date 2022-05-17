@@ -1,0 +1,20 @@
+.task-time-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.task-time-day-container span {
+  font-size: 1rem;
+}
+.task-time-day-container {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 5rem;
+  background: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

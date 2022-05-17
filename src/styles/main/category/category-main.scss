@@ -1,0 +1,31 @@
+@import "/src/assets/sass/_variables.scss";
+
+.category-container {
+  display: inline-block;
+  background-color: $background-color-dark-primary;
+  width: 60vw;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
+.category-tasks {
+  padding-top: 1rem;
+}
+.category-tasks {
+  span {
+    color: $color-icon-dark-secondary;
+    font-weight: bold;
+    font-size: $font-size-s;
+  }
+}
+.category-name {
+  padding: 0.5rem 0;
+  span {
+    font-size: $font-size-l;
+    color: $color-dark-primary;
+  }
+}
+.category-divider {
+  border: 1px solid $color-border-primary;
+  margin-top: 1rem;
+}

@@ -1,0 +1,20 @@
+@import "/src/assets/sass/_variables.scss";
+
+.new-item-button-container {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 2rem;
+}
+.new-item-button {
+  height: 4rem;
+  width: 4rem;
+  background-color: $color-border-primary;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  span {
+    font-size: 2rem;
+  }
+}

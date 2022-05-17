@@ -1,0 +1,19 @@
+@import "/src/assets/sass/_variables.scss";
+
+.left-arrow-icon-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
+.left-arrow-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid gray;
+  height: 8rem;
+  width: 8rem;
+}
+.left-arrow-icon > span {
+  font-size: 5rem;
+}

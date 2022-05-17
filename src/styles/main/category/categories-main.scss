@@ -1,0 +1,16 @@
+@import "/src/assets/sass/_variables.scss";
+
+.categories {
+  overflow: auto;
+  white-space: nowrap;
+}
+.categories::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.categories-container {
+  padding: 2rem 0 2rem 2rem;
+}
+.categories-title {
+  padding-bottom: 0.5rem;
+}
