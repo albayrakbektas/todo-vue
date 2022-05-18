@@ -13,7 +13,6 @@ export default {
   name: "LeftArrowIcon",
   methods: {
     openMenu() {
-      console.log(this.isSearchVisible);
       this.$store.commit("setOpenMenu", !this.isMenuPage);
     },
   },

@@ -8,9 +8,12 @@
       <CategoriesMain />
     </div>
     <div class="container task-main-container">
-      <TasksMain which-day="TODAY'S TASKS" />
-      <TasksMain which-day="TOMORROW'S TASKS" />
-      <TasksMain which-day="Daily TASKS" />
+      <div v-for="(item, index) in tasks" :key="index">
+        <TasksMain
+          :items="item"
+          :which-day="`${item[0]['date'].toUpperCase()}'s Tasks`"
+        />
+      </div>
       <NewTaskAddIcon />
     </div>
   </div>
@@ -33,7 +36,7 @@ export default {
     HeaderSearch,
   },
   computed: {
-    ...mapState(["isMenuPage"]),
+    ...mapState(["isMenuPage", "tasks"]),
   },
 };
 </script>

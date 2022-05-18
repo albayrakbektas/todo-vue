@@ -1,0 +1,10 @@
+@import "/src/assets/sass/_variables.scss";
+
+.task-icon-container {
+  display: flex;
+  column-gap: 0.2rem;
+  align-items: center;
+  @media screen and (min-width: $screen-desktop) {
+    column-gap: 0.5rem;
+  }
+}

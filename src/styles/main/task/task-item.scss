@@ -1,5 +1,10 @@
 @import "/src/assets/sass/_variables.scss";
 
+.task-checkbox {
+  display: flex;
+  justify-content: space-between;
+}
+
 input[type="checkbox"] {
   border: 1px solid $background-color-dark-primary;
   border-radius: 50%;

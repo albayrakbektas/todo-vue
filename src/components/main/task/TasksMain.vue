@@ -8,20 +8,8 @@
       :class="isMenuPage ? 'tasks-container-translated' : 'tasks-container'"
     >
       <ul class="task-items">
-        <li class="task-item">
-          <TaskItem />
-        </li>
-        <li class="task-item">
-          <TaskItem />
-        </li>
-        <li class="task-item">
-          <TaskItem />
-        </li>
-        <li class="task-item">
-          <TaskItem />
-        </li>
-        <li class="task-item">
-          <TaskItem />
+        <li v-for="(item, index) in items" :key="index" class="task-item">
+          <TaskItem :task="item" />
         </li>
       </ul>
     </div>
@@ -30,13 +18,13 @@
 
 <script>
 import TaskItem from "@/components/main/task/TaskItem";
-// import NewTaskAddIcon from "@/components/main/task/NewTaskAddIcon";
 import { mapState } from "vuex";
 export default {
   name: "TasksMain",
   components: { TaskItem },
   props: {
     whichDay: String,
+    items: Array,
   },
   computed: {
     ...mapState(["isMenuPage"]),

@@ -1,16 +1,35 @@
 <template>
   <div class="new-task-input-container">
     <label :for="id"></label>
-    <input :id="id" :placeholder="placeHolder" />
+    <input
+      @change="setInputValue"
+      v-model="inputValue"
+      :id="id"
+      :placeholder="placeHolder"
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: "TaskInput",
+  data() {
+    return {
+      inputValue: "",
+    };
+  },
   props: {
     placeHolder: String,
     id: String,
+  },
+  methods: {
+    setInputValue() {
+      if (this.id === "new-task-input") {
+        this.$store.commit("setTaskInputValue", this.inputValue);
+      } else {
+        this.$store.commit("setCategoryInputValue", this.inputValue);
+      }
+    },
   },
 };
 </script>

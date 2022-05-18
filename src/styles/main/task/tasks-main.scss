@@ -4,18 +4,19 @@
   overflow: auto;
   white-space: nowrap;
   position: relative;
+  max-height: 40vh;
 }
 .tasks-container::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
-.tasks-container {
-  max-height: 40vh;
-}
 .tasks-container-translated {
   max-height: 30vh;
 }
 .task-container-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 0.5rem;
 }
 .task-items {

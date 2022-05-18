@@ -5,6 +5,39 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    tasks: {
+      today: [
+        {
+          id: "today-0",
+          title: "Add a task for today..",
+          category: "Work",
+          status: true,
+          date: "today",
+        },
+      ],
+      tomorrow: [
+        {
+          id: "tomorrow-0",
+          title: "Add a task for tomorrow..",
+          category: "Home",
+          status: true,
+          date: "tomorrow",
+        },
+      ],
+      daily: [
+        {
+          id: "daily-0",
+          title: "Add a task for daily..",
+          category: "Out",
+          status: true,
+          date: "daily",
+        },
+      ],
+    },
+    taskDate: "",
+    taskInputValue: "",
+    taskCategoryValue: "",
+    selectedTask: [],
     isMenuPage: false,
     isNewTaskPage: false,
     isSearchVisible: false,
@@ -24,6 +57,21 @@ export default new Vuex.Store({
     },
     setNotifications(state, value) {
       state.isNotifications = value;
+    },
+    addNewTask(state, value) {
+      state.tasks[value.date].push(value);
+    },
+    setTaskDate(state, value) {
+      state.taskDate = value;
+    },
+    setTaskInputValue(state, value) {
+      state.taskInputValue = value;
+    },
+    setCategoryInputValue(state, value) {
+      state.taskCategoryValue = value;
+    },
+    deleteTask(state, value) {
+      state.tasks = value;
     },
   },
   actions: {},
