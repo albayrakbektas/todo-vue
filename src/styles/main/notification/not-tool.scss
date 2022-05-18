@@ -1,0 +1,12 @@
+@import "/src/assets/sass/_variables.scss";
+.notifications-tooltip {
+  position: relative;
+  overflow: scroll;
+  display: grid;
+  row-gap: 0.2rem;
+  height: 100%;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

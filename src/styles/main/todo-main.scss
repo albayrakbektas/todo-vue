@@ -2,16 +2,45 @@
 .main-container {
   background-color: $background-color-dark-page-primary;
   position: relative;
+  transition: ease 1s;
+  padding: 2rem 0;
   min-height: 100vh;
-  transition: ease 0.5s;
+  max-height: 100vh;
 }
 .translated-content {
-  transform: translate3d(75vw, 120px, 0);
-  -webkit-transform: translate3d(75vw, 120px, 0);
-  border-radius: 10rem;
+  transform: translate3d(75vw, 3rem, 0);
+  -webkit-transform: translate3d(75vw, 3rem, 0);
+  border-radius: 3rem;
   transition: linear 0.5s;
-  min-height: calc(100vh - 240px) !important;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  min-height: calc(100vh - 200px) !important;
+  @media screen and (min-width: $screen-desktop) {
+    transform: translate3d(20vw, 3rem, 0);
+    -webkit-transform: translate3d(20vw, 3rem, 0);
+  }
 }
 .container {
-  padding: 2rem 2rem 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.container-left-padding {
+  padding-left: 2rem;
+  margin-right: 2rem;
+}
+.task-main-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 100%);
+  grid-column-gap: 2rem;
+  overflow: scroll;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  @media screen and (min-width: $screen-desktop) {
+    grid-template-columns: repeat(3, 50%);
+  }
 }

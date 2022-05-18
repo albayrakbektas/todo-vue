@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CategoryMain from "@/components/main/CategoryMain";
+import CategoryMain from "@/components/main/category/CategoryMain";
 export default {
   name: "CategoriesMain",
   components: { CategoryMain },
@@ -18,5 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "/src/styles/categories-main.scss";
+@import "/src/styles/main/category/categories-main.scss";
 </style>

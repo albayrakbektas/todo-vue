@@ -1,9 +1,9 @@
 @import "/src/assets/sass/_variables.scss";
 
 .new-item-button-container {
-  position: absolute;
+  position: fixed;
   right: 1.2rem;
-  bottom: 2rem;
+  bottom: 1rem;
 }
 .new-item-button {
   height: 4rem;

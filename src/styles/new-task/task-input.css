@@ -1,3 +1,21 @@
+.new-task-input-container {
+  height: 4rem;
+}
 
+.new-task-input-container input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  background: #28394d;
+  caret-color: #ffffff;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0 2rem;
+}
+.new-task-input-container:focus {
+  text-underline: none;
+}
 
 /*# sourceMappingURL=task-input.css.map */

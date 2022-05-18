@@ -1,13 +1,22 @@
 <template>
-$END$
+  <div class="new-item-button-container">
+    <div @click="openNewTaskPage" class="new-item-button">
+      <span class="material-symbols-outlined"> add </span>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-name: "NewTaskAddIcon"
-}
+  name: "NewTaskAddIcon",
+  methods: {
+    openNewTaskPage() {
+      this.$store.commit("setNewTask", true);
+    },
+  },
+};
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+@import "/src/styles/main/task/new-task-add-icon.scss";
 </style>

@@ -5,26 +5,44 @@
     </div>
     <div class="header-item header-input-container">
       <label for="search-input"></label>
-      <input id="search-input" class="hidden-search-input" autofocus />
+      <input
+        id="search-input"
+        :class="
+          isSearchVisible ? 'visible-search-input' : 'hidden-search-input'
+        "
+        autofocus
+      />
     </div>
     <div @click="openSearch" class="header-item">
       <span class="material-symbols-outlined search-open-button"> search </span>
     </div>
-    <div class="header-item header-notification-container">
-      <span class="material-symbols-outlined"> notifications </span>
-      <div>
-        <span>2</span>
-      </div>
-    </div>
+    <NotIcon />
+    <NotToolContainer />
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+import NotToolContainer from "@/components/main/notification/NotToolContainer";
+import NotIcon from "@/components/main/notification/NotIcon";
+
 export default {
   name: "HeaderSearch",
+  components: { NotIcon, NotToolContainer },
+  methods: {
+    openMenu() {
+      this.$store.commit("setOpenMenu", !this.isMenuPage);
+    },
+    openSearch() {
+      this.$store.commit("setSearchVisible", true);
+    },
+  },
+  computed: {
+    ...mapState(["isSearchVisible", "isMenuPage"]),
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "/src/styles/header-search.scss";
+@import "/src/styles/main/header-search.scss";
 </style>

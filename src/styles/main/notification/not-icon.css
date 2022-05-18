@@ -1,0 +1,32 @@
+.header-item {
+  display: flex;
+  align-items: center;
+}
+
+.header-notification-container {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+.header-notification-container span:first-child {
+  position: absolute;
+}
+.header-notification-container div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 50%;
+  top: 2px;
+  right: 5px;
+}
+.header-notification-container div span {
+  color: white;
+  font-size: 10px;
+  line-height: 0;
+}
+
+/*# sourceMappingURL=not-icon.css.map */

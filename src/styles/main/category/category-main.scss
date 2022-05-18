@@ -7,6 +7,10 @@
   padding: 1rem;
   margin-right: 1rem;
   border-radius: 1rem;
+  cursor: pointer;
+  @media screen and (min-width: $screen-desktop) {
+    width: 25vw;
+  }
 }
 .category-tasks {
   padding-top: 1rem;

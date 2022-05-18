@@ -1,3 +1,29 @@
+.new-task-footer {
+  padding-top: 2rem;
+  justify-content: end;
+}
 
+.new-task-add-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.new-task-add {
+  width: 50%;
+  padding: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 5rem;
+  background: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.new-task-add span {
+  font-size: 1rem;
+}
+.new-task-add span:last-child {
+  font-size: 2rem;
+}
 
 /*# sourceMappingURL=new-task-footer.css.map */

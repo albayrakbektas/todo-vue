@@ -1,114 +1,17 @@
-.new-task-page {
-  min-height: 100vh;
-  visibility: hidden;
-  width: 100%;
-  display: grid;
-  align-items: center;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import "/src/assets/sass/_variables.scss";
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   new-task-main.scss 1:9  root stylesheet */
 
-.new-task-container {
-  display: grid;
-  gap: 10rem;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"/src/assets/sass/_variables.scss\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   new-task-main.scss 1:9  root stylesheet";
 }
-
-.new-task-close-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 10rem;
-}
-
-.new-task-close-container span {
-  font-size: 4rem;
-  font-weight: bolder;
-}
-
-.new-task-main {
-  display: grid;
-  gap: 2rem;
-  padding-top: 2rem;
-}
-
-.new-task-input-container,
-.new-category-input-container {
-  height: 10rem;
-}
-
-.new-task-input-container input,
-.new-category-input-container input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  border-radius: 5rem;
-  background: #28394d;
-  caret-color: #ffffff;
-  font-size: 2.5rem;
-  color: #ffffff;
-  padding: 0 5rem;
-}
-
-.task-options-container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 5rem;
-  padding-top: 2rem;
-}
-
-.new-task-footer {
-  padding-top: 10rem;
-}
-
-.category-list-item {
-  color: #ffffff;
-  font-size: 2rem;
-}
-
-.task-time-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.task-time-day-container,
-.new-task-add {
-  width: 100%;
-  padding: 2rem;
-  border: 2px solid #ffffff;
-  border-radius: 5rem;
-  background: #2196f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.task-time-day-container span {
-  font-size: 2.5rem;
-}
-
-.new-task-add-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.new-task-footer {
-  justify-content: end;
-}
-
-.new-task-add {
-  display: flex;
-  align-items: center;
-  width: 50%;
-}
-
-.new-task-add span {
-  font-size: 2.5rem;
-}
-
-.new-task-add span:last-child {
-  font-size: 4rem;
-}
-
-/*# sourceMappingURL=new-task-main.css.map */

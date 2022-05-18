@@ -3,16 +3,17 @@
 .tasks-container {
   overflow: auto;
   white-space: nowrap;
+  position: relative;
 }
 .tasks-container::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
-.task-container {
-  padding: 1rem 2rem;
-}
 .tasks-container {
-  max-height: 50vh;
+  max-height: 40vh;
+}
+.tasks-container-translated {
+  max-height: 30vh;
 }
 .task-container-title {
   padding-bottom: 0.5rem;
@@ -20,11 +21,12 @@
 .task-items {
   overflow: auto;
   white-space: nowrap;
+  padding-bottom: 2rem;
 }
 .task-item {
   background-color: $background-color-dark-primary;
   padding: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   border-radius: 1rem;
   text-decoration: none;
   list-style: none;

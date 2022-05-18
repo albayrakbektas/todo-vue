@@ -1,17 +1,16 @@
 <template>
   <div class="task-time-container">
-    <div class="task-time-day-container today">
-      <span>TODAY</span>
-    </div>
-    <div class="task-time-day-container tomorrow">
-      <span>TOMORROW</span>
-    </div>
+    <TaskTime id="today" date="TODAY" />
+    <TaskTime id="tomorrow" date="TOMORROW" />
+    <TaskTime id="daily" date="DAILY" />
   </div>
 </template>
 
 <script>
+import TaskTime from "@/components/new-task/TaskTime";
 export default {
-  name: "TaskTime",
+  name: "TaskTimeMain",
+  components: { TaskTime },
 };
 </script>
 

@@ -1,95 +1,44 @@
-.new-task-page {
+@import "/src/assets/sass/_variables.scss";
+
+.new-task-page-container {
   min-height: 100vh;
-  visibility: hidden;
   width: 100%;
   display: grid;
   align-items: center;
+  padding: 0 2rem;
+  overflow: hidden;
+  animation: 0.5s ease-out pageLoadingAnimation;
+  @media screen and (min-width: $screen-desktop) {
+    padding: 0 15rem;
+  }
 }
 .new-task-container {
   display: grid;
-  gap: 10rem;
+  gap: 2rem;
+  height: 100%;
+  align-content: space-evenly;
 }
-.new-task-close-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 10rem;
-}
-.new-task-close-container span {
-  font-size: 4rem;
-  font-weight: bolder;
-}
+
 .new-task-main {
   display: grid;
-  gap: 2rem;
-  padding-top: 2rem;
-}
-.new-task-input-container,
-.new-category-input-container {
-  height: 10rem;
-}
-.new-task-input-container input,
-.new-category-input-container input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  border-radius: 5rem;
-  background: rgb(40, 57, 77);
-  caret-color: #ffffff;
-  font-size: 2.5rem;
-  color: #ffffff;
-  padding: 0 5rem;
+  gap: 0.5rem;
+  padding-top: 1rem;
 }
 .task-options-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 5rem;
-  padding-top: 2rem;
-}
-.new-task-footer {
-  padding-top: 10rem;
+  padding-top: 1rem;
 }
 .category-list-item {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1rem;
 }
-.task-time-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 1rem;
-}
-.task-time-day-container,
-.new-task-add {
-  width: 100%;
-  padding: 2rem;
-  border: 2px solid #ffffff;
-  border-radius: 5rem;
-  background: #2196f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.task-time-day-container span {
-  font-size: 2.5rem;
-}
-.new-task-add-container {
-  display: flex;
-  justify-content: flex-end;
-}
-.new-task-footer {
-  justify-content: end;
-}
-.new-task-add {
-  display: flex;
-  align-items: center;
-  width: 50%;
-}
-.new-task-add span {
-  font-size: 2.5rem;
-}
-.new-task-add span:last-child {
-  font-size: 4rem;
+@keyframes pageLoadingAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

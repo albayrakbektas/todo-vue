@@ -1,24 +1,17 @@
-.task-time-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 0.5rem;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import "/src/assets/sass/_variables.scss";
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   task-time-main.scss 1:9  root stylesheet */
 
-.task-time-day-container span {
-  font-size: 1rem;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"/src/assets/sass/_variables.scss\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   task-time-main.scss 1:9  root stylesheet";
 }
-
-.task-time-day-container {
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid #ffffff;
-  border-radius: 5rem;
-  background: #2196f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-/*# sourceMappingURL=task-time.css.map */

@@ -1,13 +1,18 @@
 <template>
-$END$
+  <div class="user-name">
+    <span>
+      Bektas <br />
+      Albayrak
+    </span>
+  </div>
 </template>
 
 <script>
 export default {
-name: "UserName"
-}
+  name: "UserName",
+};
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+@import "/src/styles/menu/user-name.scss";
 </style>

@@ -1,0 +1,14 @@
+@import "/src/assets/sass/_variables.scss";
+.avatar-container {
+  height: 7rem;
+  width: 7rem;
+}
+.avatar {
+  border-right: 5px solid $color-border-primary;
+  border-radius: 50%;
+}
+.profile-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}

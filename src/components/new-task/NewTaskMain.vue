@@ -1,53 +1,30 @@
 <template>
-  <div class="new-task-page-container display-none">
-    <div class="new-task-page">
-      <div class="container new-task-container">
-        <div @click="openNewTaskPage" class="new-task-close-container">
-          <span class="material-symbols-outlined"> close </span>
-        </div>
-        <div class="new-task-main">
-          <div class="new-task-input-container">
-            <label for="new-task-input"></label>
-            <input id="new-task-input" placeholder="Add new task.." autofocus />
-          </div>
-          <div class="task-options-container">
-            <div class="new-category-input-container">
-              <label for="new-category-input"></label>
-              <input
-                id="new-category-input"
-                placeholder="Add category.."
-                autofocus
-              />
-            </div>
-            <div class="task-time-container">
-              <div class="task-time-day-container today">
-                <span>TODAY</span>
-              </div>
-              <div class="task-time-day-container tomorrow">
-                <span>TOMORROW</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="new-task-footer">
-          <div class="new-task-add-container">
-            <div class="new-task-add">
-              <span>New Task</span>
-              <span class="material-symbols-outlined"> expand_less </span>
-            </div>
-          </div>
+  <div class="new-task-page-container">
+    <div class="container new-task-container">
+      <CloseButton />
+      <div class="new-task-main">
+        <TaskInput id="new-task-input" place-holder="Add new task.." />
+        <div class="task-options-container">
+          <TaskInput id="new-category-input" place-holder="Add category.." />
+          <TaskTimeMain />
         </div>
       </div>
+      <NewTaskFooter />
     </div>
   </div>
 </template>
 
 <script>
+import CloseButton from "@/components/new-task/CloseButton";
+import TaskTimeMain from "@/components/new-task/TaskTimeMain";
+import NewTaskFooter from "@/components/new-task/NewTaskFooter";
+import TaskInput from "@/components/new-task/TaskInput";
 export default {
   name: "NewTaskMain",
+  components: { TaskInput, NewTaskFooter, TaskTimeMain, CloseButton },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "/src/styles/main/task/new-task-main.scss";
+@import "/src/styles/new-task/new-task-main.scss";
 </style>

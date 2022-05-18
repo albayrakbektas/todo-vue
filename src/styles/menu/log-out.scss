@@ -1,0 +1,10 @@
+@import "/src/assets/sass/_variables.scss";
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  column-gap: 0.5rem;
+  cursor: pointer;
+}

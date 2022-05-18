@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "/src/styles/category-main.scss";
+@import "/src/styles/main/category/category-main.scss";
 </style>

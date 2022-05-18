@@ -1,20 +1,19 @@
+@import "/src/assets/sass/_variables.scss";
+
 .task-time-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
   width: 100%;
   justify-content: center;
   gap: 0.5rem;
+  row-gap: 1rem;
+  @media screen and (min-width: $screen-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.task-time-day-container span {
-  font-size: 1rem;
-}
-.task-time-day-container {
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid #ffffff;
-  border-radius: 5rem;
-  background: #2196f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+#daily {
+  grid-column: 2;
+  @media screen and (min-width: $screen-desktop) {
+    grid-column: 3;
+  }
 }
