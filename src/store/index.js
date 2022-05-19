@@ -5,35 +5,30 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    tasks: {
-      today: [
-        {
-          id: "today-0",
-          title: "Add a task for today..",
-          category: "Work",
-          status: true,
-          date: "today",
-        },
-      ],
-      tomorrow: [
-        {
-          id: "tomorrow-0",
-          title: "Add a task for tomorrow..",
-          category: "Home",
-          status: true,
-          date: "tomorrow",
-        },
-      ],
-      daily: [
-        {
-          id: "daily-0",
-          title: "Add a task for daily..",
-          category: "Out",
-          status: true,
-          date: "daily",
-        },
-      ],
-    },
+    tasks: [
+      {
+        id: "today-0",
+        title: "Add a task for today..",
+        category: "Work",
+        status: true,
+        date: "today",
+      },
+      {
+        id: "tomorrow-0",
+        title: "Add a task for tomorrow..",
+        category: "Home",
+        status: true,
+        date: "tomorrow",
+      },
+
+      {
+        id: "daily-0",
+        title: "Add a task for daily..",
+        category: "Out",
+        status: true,
+        date: "daily",
+      },
+    ],
     taskDate: "",
     taskInputValue: "",
     taskCategoryValue: "",
@@ -59,7 +54,7 @@ export default new Vuex.Store({
       state.isNotifications = value;
     },
     addNewTask(state, value) {
-      state.tasks[value.date].push(value);
+      state.tasks.push(value);
     },
     setTaskDate(state, value) {
       state.taskDate = value;

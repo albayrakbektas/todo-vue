@@ -24,7 +24,7 @@ export default {
   components: { TaskItem },
   props: {
     whichDay: String,
-    items: Array,
+    items: [],
   },
   computed: {
     ...mapState(["isMenuPage"]),

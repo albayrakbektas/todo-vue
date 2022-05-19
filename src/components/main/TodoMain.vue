@@ -8,10 +8,12 @@
       <CategoriesMain />
     </div>
     <div class="container task-main-container">
-      <div v-for="(item, index) in tasks" :key="index">
+      <div v-for="(item, index) in this.tasks" :key="index">
         <TasksMain
-          :items="item"
-          :which-day="`${item[0]['date'].toUpperCase()}'s Tasks`"
+          :items="tasks.filter((el) => el.date === item.date)"
+          :which-day="`${
+            item.date.charAt(0).toUpperCase() + item.date.slice(1)
+          }'s Tasks`"
         />
       </div>
       <NewTaskAddIcon />

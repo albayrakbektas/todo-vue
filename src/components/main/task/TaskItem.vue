@@ -5,7 +5,7 @@
       <span class="task-title">{{ task.title }}</span>
       <span class="checkmark"></span>
     </label>
-    <div @click="bas(task)">
+    <div class="task-icons-container" @click="deleteTask(task)">
       <TaskIcons />
     </div>
   </div>
@@ -23,17 +23,15 @@ export default {
   computed: {
     ...mapState(["tasks"]),
   },
-  mounted() {
-    console.log(this.tasks);
-  },
   methods: {
-    bas(e) {
+    deleteTask(obj) {
       const filteredArray = [];
-      for (let task of Object.values(this.tasks)) {
-        filteredArray.push(task.filter((task) => task.id !== e.id));
+      for (let task of this.tasks) {
+        if (task.id !== obj.id) {
+          filteredArray.push(task);
+        }
       }
-      console.log(filteredArray);
-      // this.$store.commit("deleteTask", filteredArray);
+      this.$store.commit("deleteTask", filteredArray);
     },
   },
 };

@@ -66,3 +66,7 @@ input[type="checkbox"] {
   font-size: $font-size-s;
   padding-left: 3rem;
 }
+.task-icons-container {
+  display: flex;
+  align-items: center;
+}

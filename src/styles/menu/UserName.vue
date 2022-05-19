@@ -1,9 +1,7 @@
 <template>
   <div class="user-name">
-    <span>
-      Bektas <br />
-      Albayrak
-    </span>
+    <span> Bektas </span>
+    <span> Albayrak </span>
   </div>
 </template>
 
