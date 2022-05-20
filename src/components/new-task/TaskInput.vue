@@ -6,6 +6,7 @@
       v-model="inputValue"
       :id="id"
       :placeholder="placeHolder"
+      required
     />
   </div>
 </template>
