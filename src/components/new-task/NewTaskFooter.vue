@@ -6,6 +6,7 @@
         <span class="material-symbols-outlined"> expand_less </span>
       </div>
     </div>
+    {{ this.tasks[0] }}
   </div>
 </template>
 
@@ -19,13 +20,17 @@ export default {
   },
   methods: {
     addNewTask() {
-      this.$store.commit("addNewTask", {
-        id: uuidv4(),
-        title: this.taskInputValue,
-        category: this.taskCategoryValue,
-        status: true,
-        date: this.taskDate,
-      });
+      for (let i = 0; i < Object.values(this.tasks).length; i++) {
+        if (Object.values(this.tasks)[i][0]["date"] === this.taskDate) {
+          Object.values(this.tasks)[i].push({
+            id: uuidv4(),
+            title: this.taskInputValue,
+            category: this.taskCategoryValue,
+            status: true,
+            date: this.taskDate,
+          });
+        }
+      }
       this.$store.commit("setNewTask", false);
     },
   },

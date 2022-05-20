@@ -10,10 +10,8 @@
     <div class="container task-main-container">
       <div v-for="(item, index) in this.tasks" :key="index">
         <TasksMain
-          :items="tasks.filter((el) => el.date === item.date)"
-          :which-day="`${
-            item.date.charAt(0).toUpperCase() + item.date.slice(1)
-          }'s Tasks`"
+          :items="item"
+          :which-day="`${item[0]['date'].toUpperCase()}'s Tasks`"
         />
       </div>
       <NewTaskAddIcon />
@@ -37,8 +35,30 @@ export default {
     GreetingMain,
     HeaderSearch,
   },
+  mounted() {
+    console.log(
+      Object.values(this.tasks).length,
+      Object.values(this.tasks)[0][0]["date"]
+    );
+  },
   computed: {
     ...mapState(["isMenuPage", "tasks"]),
+  },
+  methods: {
+    filterTasks(item, index, tasks) {
+      // console.log(tasks[index].item.date);
+      // console.log(
+      //   tasks[index]["date"]
+      //   // !tasks[index][item.date] && tasks.filter((el) => el.date === item.date)
+      // );
+      // if (tasks[index][item.date]) {
+      //   // Object.values(tasks[index]).concat(item);
+      //   console.log(tasks[index][item.date]);
+      // }
+      // console.log(tasks.filter((el) => el.date === item.date));
+      !tasks.includes(item.date) && tasks.filter((el) => el.date === item.date);
+      return [];
+    },
   },
 };
 </script>
