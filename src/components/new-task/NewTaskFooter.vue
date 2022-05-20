@@ -6,7 +6,6 @@
         <span class="material-symbols-outlined"> expand_less </span>
       </div>
     </div>
-    {{ this.tasks[0] }}
   </div>
 </template>
 

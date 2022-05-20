@@ -14,6 +14,7 @@
 <script>
 import TaskIcons from "@/components/main/task/TaskIcons";
 import { mapState } from "vuex";
+// import { v4 as uuidv4 } from "uuid";
 export default {
   name: "TaskItem",
   components: { TaskIcons },
@@ -25,13 +26,22 @@ export default {
   },
   methods: {
     deleteTask(obj) {
-      const filteredArray = [];
-      for (let task of this.tasks) {
-        if (task.id !== obj.id) {
-          filteredArray.push(task);
-        }
+      let deletedObject = Object.values(this.tasks[obj.date]).filter(
+        (el) => el.id !== obj.id
+      );
+      console.log(Object.values(this.tasks)[obj.date]);
+      if (this.tasks[obj.date].length < 2) {
+        Object.values(this.tasks)[obj.date].push({
+          id: "0",
+          title: "Add a task for Today..",
+          category: "category",
+          status: true,
+          date: "today",
+        });
       }
-      this.$store.commit("deleteTask", filteredArray);
+      this.tasks[obj.date] = deletedObject;
+      console.log(this.tasks[obj.date]);
+      // this.$store.commit("deleteTask", filteredArray);
     },
   },
 };

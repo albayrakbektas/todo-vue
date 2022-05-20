@@ -8,7 +8,7 @@ export default new Vuex.Store({
     tasks: {
       today: [
         {
-          id: "today-0",
+          id: "0",
           title: "Add a task for today..",
           category: "Work",
           status: true,
@@ -17,7 +17,7 @@ export default new Vuex.Store({
       ],
       tomorrow: [
         {
-          id: "tomorrow-0",
+          id: "0",
           title: "Add a task for tomorrow..",
           category: "Home",
           status: true,
@@ -26,7 +26,7 @@ export default new Vuex.Store({
       ],
       daily: [
         {
-          id: "daily-0",
+          id: "0",
           title: "Add a task for daily..",
           category: "Out",
           status: true,
