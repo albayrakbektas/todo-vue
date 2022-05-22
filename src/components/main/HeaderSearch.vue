@@ -10,11 +10,25 @@
         :class="
           isSearchVisible ? 'visible-search-input' : 'hidden-search-input'
         "
+        v-model="searchValue"
         autofocus
       />
     </div>
-    <div @click="openSearch" class="header-item">
-      <span class="material-symbols-outlined search-open-button"> search </span>
+    <div class="header-item">
+      <span
+        v-if="!searchValue && isSearchVisible"
+        @click="closeSearch"
+        class="material-symbols-outlined search-open-button"
+      >
+        close
+      </span>
+      <span
+        v-else
+        @click="openSearch"
+        class="material-symbols-outlined search-open-button"
+      >
+        search
+      </span>
     </div>
     <NotIcon />
     <NotToolContainer />
@@ -29,12 +43,20 @@ import NotIcon from "@/components/main/notification/NotIcon";
 export default {
   name: "HeaderSearch",
   components: { NotIcon, NotToolContainer },
+  data() {
+    return {
+      searchValue: "",
+    };
+  },
   methods: {
     openMenu() {
       this.$store.commit("setOpenMenu", !this.isMenuPage);
     },
     openSearch() {
       this.$store.commit("setSearchVisible", true);
+    },
+    closeSearch() {
+      this.$store.commit("setSearchVisible", false);
     },
   },
   computed: {

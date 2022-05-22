@@ -51,7 +51,6 @@ body {
 #app {
   background-color: #1f2d3d;
   min-height: 100vh;
-  height: max-content;
   max-width: 100vw;
   width: 100vw;
   position: relative;
