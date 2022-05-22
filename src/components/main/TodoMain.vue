@@ -36,9 +36,6 @@ export default {
     GreetingMain,
     HeaderSearch,
   },
-  mounted() {
-    console.log(this.tasks);
-  },
   computed: {
     ...mapState(["isMenuPage", "tasks"]),
   },

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NewTaskMain v-if="isNewTaskPage" />
+    <NewTaskMain v-if="isNewTaskPage || isEditTask" />
     <div v-else>
       <MenuMain />
       <TodoMain />
@@ -17,7 +17,7 @@ export default {
   name: "App",
   components: { NewTaskMain, TodoMain, MenuMain },
   computed: {
-    ...mapState(["isNewTaskPage"]),
+    ...mapState(["isNewTaskPage", "isEditTask"]),
   },
   methods: {
     openNewTaskPage() {

@@ -12,6 +12,7 @@ export default {
   methods: {
     openNewTaskPage() {
       this.$store.commit("setNewTask", true);
+      this.$store.commit("setEditTask", false);
     },
   },
 };

@@ -34,38 +34,18 @@ export default new Vuex.Store({
         },
       ],
     },
-    // tasks: [
-    //   {
-    //     id: "today-0",
-    //     title: "Add a task for today..",
-    //     category: "Work",
-    //     status: true,
-    //     date: "today",
-    //   },
-    //   {
-    //     id: "tomorrow-0",
-    //     title: "Add a task for tomorrow..",
-    //     category: "Home",
-    //     status: true,
-    //     date: "tomorrow",
-    //   },
-    //
-    //   {
-    //     id: "daily-0",
-    //     title: "Add a task for daily..",
-    //     category: "Out",
-    //     status: true,
-    //     date: "daily",
-    //   },
-    // ],
     taskDate: "",
     taskInputValue: "",
     taskCategoryValue: "",
     selectedTask: [],
+    editedTask: {},
     isMenuPage: false,
     isNewTaskPage: false,
     isSearchVisible: false,
     isNotifications: false,
+    isTaskInputNull: false,
+    isCategoryInputNull: false,
+    isEditTask: false,
     greetingMessage: "What's up, Bektas!",
   },
   getters: {},
@@ -75,6 +55,12 @@ export default new Vuex.Store({
     },
     setNewTask(state, value) {
       state.isNewTaskPage = value;
+    },
+    setEditTask(state, value) {
+      state.isEditTask = value;
+    },
+    setEditedTask(state, value) {
+      state.editedTask = value;
     },
     setSearchVisible(state, value) {
       state.isSearchVisible = value;

@@ -6,7 +6,7 @@
         <TaskInput id="new-task-input" place-holder="Add new task.." />
         <div class="task-options-container">
           <TaskInput id="new-category-input" place-holder="Add category.." />
-          <TaskTimeMain />
+          <TaskTimeMain v-if="!this.$store.state.isEditTask" />
         </div>
       </div>
       <NewTaskFooter />
