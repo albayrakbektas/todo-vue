@@ -14,6 +14,13 @@ export default new Vuex.Store({
           status: true,
           date: "today",
         },
+        {
+          id: "0",
+          title: "Second work category",
+          category: "Work",
+          status: true,
+          date: "today",
+        },
       ],
       tomorrow: [
         {
